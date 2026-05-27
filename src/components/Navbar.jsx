@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="w-full flex justify-between items-center py-8 px-10 md:px-24 bg-white text-gray-800">
+    <nav className="w-full flex justify-between items-center py-8 px-8 md:px-24 bg-[#374375] text-white">
       <div className="font-bold text-xl tracking-widest uppercase">
         Bea Gamilong
       </div>
