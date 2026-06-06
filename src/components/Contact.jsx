@@ -32,13 +32,13 @@ export default function Contact() {
 
         {/* Right Side: Links */}
         <div className="flex flex-col gap-3 text-sm font-semibold text-[#374375]">
-          <a href="mailto:your.email@example.com" className="hover:text-[#895159] transition flex items-center gap-2">
+          <a href="beaandreagamilong@gmail.com" className="hover:text-[#895159] transition flex items-center gap-2">
             <span>✉</span> Email Me
           </a>
           <a href="https://github.com/beaandrea" target="_blank" rel="noreferrer" className="hover:text-[#895159] transition flex items-center gap-2">
             <span>⌨</span> GitHub
           </a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer" className="hover:text-[#895159] transition flex items-center gap-2">
+          <a href="https://www.linkedin.com/in/bea-andrea-gamilong" target="_blank" rel="noreferrer" className="hover:text-[#895159] transition flex items-center gap-2">
             <span>💼</span> LinkedIn
           </a>
         </div>

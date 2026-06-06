@@ -24,7 +24,7 @@ export default function Services() {
                     <div className="w-full aspect-[4/3] bg-[#BABDE2] mb-6"></div>
                     <h3 className="font-bold text-[#374375] text-lg mb-3 uppercase tracking-wide">Data Modeling & NLP</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                        I build reobust data pipelines using Python, specializaing in transforming massive datasets and extracting actionable insights from unstructured text.
+                        I build rebust data pipelines using Python, specializaing in transforming massive datasets and extracting actionable insights from unstructured text.
                     </p>
                 </div>
 
