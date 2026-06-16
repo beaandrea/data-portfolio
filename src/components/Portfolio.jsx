@@ -1,48 +1,32 @@
-import aegisImg from '../assets/aegis_dashboard.png';
+import aegisImg from '../assets/images/01_aegis/aegis_dashboard.png';
+import meridianImg from '../assets/images/02_meridian/page1_territory.png';
+import literaryImg from '../assets/images/03_literary/emotional_arc.png';
 
 export default function Portfolio() {
   const projects = [
+    {
+      title: "Literary Time Machine",
+      category: "NLP & Python",
+      description: "An NLP pipeline analyzing over 500,000 words of unstructured text to extract thematic and temporal insights.",
+      image: literaryImg,
+      badge: "Multiple Analysis",
+      link: "https://github.com/beaandrea/literary-time-machine.git"
+    },
     {
       title: "FY23 Workforce Utilization Analysis - Aegis GBS",
       category: "Python, SQL, Power BI",
       description: "Analyzed 550k+ HR records to uncover $4.4M in avoidable overtime costs, delivering a cost-neutral hiring recommendation to address chronic understaffing.",
       image: aegisImg,
+      badge: null,
       link: "https://github.com/beaandrea/aegis_workforce_capacity.git"
     },
     {
-      title: "Literary Time Machine",
-      category: "NLP & Python",
-      description: "An NLP pipeline analyzing over 500,000 words of unstructured text to extract thematic and temporal insights.",
-      image: null,
-      link: "#"
-    },
-    {
-      title: "Smart Journal",
-      category: "Full-Stack Development",
-      description: "A comprehensive web application featuring integrated mood-tracking functionality and a responsive user interface.",
-      image: null,
-      link: "#"
-    },
-    {
-      title: "KPMG Ace the Case",
-      category: "Technology Consulting",
-      description: "Strategic case study competition focusing on digital transformation, architecture, and actionable business intelligence.",
-      image: null,
-      link: "#"
-    },
-    {
-      title: "Sales Forecasting Model",
-      category: "Predictive Analytics",
-      description: "Time-series forecasting model built to predict quarterly revenue trends and optimize future planning.",
-      image: null,
-      link: "#"
-    },
-    {
-      title: "Customer Segmentation",
-      category: "Tableau Visualization",
-      description: "Interactive dashboard clustering customer behaviors to identify key demographics and drive targeted campaigns.",
-      image: null,
-      link: "#"
+      title: "Meridian IS: Sales Force Capacity Analytics",
+      category: "Python, SQL, Power BI",
+      description: "An executive Power BI dashboard and SQL financial model that identifies pipeline concentration bottlenecks and provides a data-driven strategy to unlock $4.93M in stalled B2B revenue.",
+      image: meridianImg,
+      badge: "3-Page Dashboard",
+      link: "https://github.com/beaandrea/meridian-sales-analytics.git"
     }
   ];
 
@@ -57,12 +41,19 @@ export default function Portfolio() {
         {projects.map((project, index) => (
           <div key={index} className="bg-white border border-gray-200 hover:shadow-lg transition duration-300 flex flex-col">
             
-            {/* Image Handling Area */}
-            <div className="w-full aspect-video bg-[#BABDE2] flex items-center justify-center overflow-hidden">
+            {/* Image Handling Area with Badge Logic */}
+            <div className="w-full aspect-video bg-[#BABDE2] flex items-center justify-center overflow-hidden relative">
               {project.image ? (
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
               ) : (
                 <span className="text-[#374375] font-semibold text-sm">[ Dashboard / UI Image Here ]</span>
+              )}
+              
+              {/* This renders the sleek dark badge over the image if one exists */}
+              {project.badge && (
+                <div className="absolute top-4 right-4 bg-gray-900 text-white text-[10px] font-bold px-3 py-1.5 uppercase tracking-wider shadow-md">
+                  {project.badge}
+                </div>
               )}
             </div>
             
@@ -77,7 +68,6 @@ export default function Portfolio() {
                 {project.description}
               </p>
               
-              {/* This is now an anchor tag that links to your GitHub Repo */}
               <a 
                 href={project.link} 
                 target="_blank" 
@@ -91,10 +81,18 @@ export default function Portfolio() {
         ))}
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex flex-col items-center gap-6 mt-8">
         <button className="bg-[#374375] hover:opacity-90 text-[#FFFCF5] px-10 py-4 font-bold text-sm tracking-widest uppercase transition">
-          View All Projects
+          View All Data Projects
         </button>
+        <a 
+          href="https://github.com/beaandrea" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-sm text-gray-500 border-b border-transparent hover:border-gray-500 transition"
+        >
+          P.S. Looking for my full-stack web development projects?
+        </a>
       </div>
     </section>
   )

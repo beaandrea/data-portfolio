@@ -1,4 +1,4 @@
-import gradImg from '../assets/graduation_pic.jpg';
+import gradImg from '../assets/about_me.jpg';
 
 export default function About() {
     return (
@@ -6,11 +6,10 @@ export default function About() {
 
             {/* Left Column: Image Box */}
             <div className="w-full md:w-1/2 flex justify-end">
-                {/* Swapped the empty box for your actual graduation image! */}
-                <img 
-                    src={gradImg} 
-                    alt="Bea Gamilong" 
-                    className="w-3/4 aspect-square object-cover border-l-8 border-b-8 border-[#374375] shadow-lg"
+                <img
+                    src={gradImg}
+                    alt="Bea Gamilong"
+                    className="w-1/2 aspect-square object-cover object-center border-l-8 border-b-8 border-[#374375] shadow-lg"
                 />
             </div>
 

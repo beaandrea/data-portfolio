@@ -1,3 +1,5 @@
+import gradImg from '../assets/graduation_pic.jpg';
+
 export default function Hero() {
   return (
     <section id="home" className="flex flex-col-reverse md:flex-row items-center justify-between px-10 md:px-24 py-20 bg-white">
@@ -31,8 +33,12 @@ export default function Hero() {
       </div>
 
       {/* Right Column: Image Placeholder */}
-      <div className="md:w-1/3 bg-gray-200 w-full aspect-[4/5] border border-gray-300">
-        {/* Placeholder */}
+      <div className="md:w-1/3">
+        <img
+          src={gradImg}
+          alt="Bea Gamilong"
+          className="w-full aspect-[4/5] object-cover object-center border border-gray-300"
+        />
       </div>
 
     </section>
