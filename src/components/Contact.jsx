@@ -1,48 +1,56 @@
+import emailImg from '../assets/email_icon.png';
+import githubImg from '../assets/github_icon.png';
+import linkedinImg from '../assets/linkedin_icon.png';
+
 export default function Contact() {
   return (
-    <footer id="contact" className="w-full">
+    <footer id="contact" className="w-full pb-10">
+      
       {/* Call to Action Banner */}
-      <div className="bg-[#BABDE2] py-16 px-10 text-center">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-[#374375] uppercase tracking-wide mb-8">
-          Have a project in mind? Let's build<br className="hidden md:block" /> something great together.
-        </h2>
-        <div className="flex justify-center gap-4">
-          <button className="bg-white hover:bg-gray-100 text-[#374375] px-8 py-3 font-bold text-sm tracking-wide transition">
-            HIRE ME
-          </button>
-          <button className="bg-[#374375] hover:opacity-90 text-white px-8 py-3 font-bold text-sm tracking-wide transition">
-            VIEW MY WORK
-          </button>
+      <div className="bg-azurite rounded-[2.5rem] p-16 mx-6 md:mx-10 mb-10 relative overflow-hidden text-center shadow-xl border border-lapis">
+        {/* Decorative background glow */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-lapis rounded-full blur-[80px] opacity-50"></div>
+        
+        <div className="relative z-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-wide mb-8 leading-tight">
+            Have a project in mind? <br className="hidden md:block" /> Let's build <span className="text-earth">something great together.</span>
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4">
+            <a href="mailto:beaandreagamilong@gmail.com?subject=Reaching%20out%20from%20your%20Portfolio" className="bg-earth hover:bg-white text-azurite px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase transition shadow-md">
+                Email Me
+            </a>
+            <a href="#work" className="bg-transparent border-2 border-earth hover:bg-earth text-earth hover:text-azurite px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase transition">
+                View My Work
+            </a>
+            </div>
         </div>
       </div>
 
-      {/* Final Footer Details */}
-      <div className="bg-white py-10 px-10 md:px-24 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-gray-200">
-        
-        {/* Left Side: Name & Copyright */}
+      <div className="px-10 md:px-24 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-extrabold text-[#374375] tracking-widest uppercase mb-1">
+          <h3 className="text-xl font-extrabold text-azurite tracking-widest uppercase mb-1">
             Bea Gamilong
           </h3>
-          <div className="inline-block bg-[#374375] text-white px-3 py-1 text-xs font-medium mb-3">
-            Data Analyst & Digital Transformation
+          <div className="inline-block bg-lapis text-white px-3 py-1 rounded-full text-xs font-bold tracking-wide mb-3">
+            Data Analyst
           </div>
-          <p className="text-xs text-gray-400">© {new Date().getFullYear()} Bea Andrea P. Gamilong. All rights reserved.</p>
+          <p className="text-xs text-gray-500 font-medium">© {new Date().getFullYear()} Bea Andrea P. Gamilong. All rights reserved.</p>
         </div>
 
-        {/* Right Side: Links */}
-        <div className="flex flex-col gap-3 text-sm font-semibold text-[#374375]">
-          <a href="beaandreagamilong@gmail.com" className="hover:text-[#895159] transition flex items-center gap-2">
-            <span>✉</span> Email Me
+        <div className="flex flex-wrap justify-center gap-6 text-sm font-bold text-azurite">
+          <a href="mailto:beaandreagamilong@gmail.com?subject=Reaching%20out%20from%20your%20Portfolio" className="hover:text-earth transition flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
+            <img src={emailImg} alt="Email Icon" className="w-5 h-5 object-contain" /> 
+            Email
           </a>
-          <a href="https://github.com/beaandrea" target="_blank" rel="noreferrer" className="hover:text-[#895159] transition flex items-center gap-2">
-            <span>⌨</span> GitHub
+          <a href="https://github.com/beaandrea" target="_blank" rel="noreferrer" className="hover:text-earth transition flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
+            <img src={githubImg} alt="GitHub Icon" className="w-5 h-5 object-contain" />
+            GitHub
           </a>
-          <a href="https://www.linkedin.com/in/bea-andrea-gamilong" target="_blank" rel="noreferrer" className="hover:text-[#895159] transition flex items-center gap-2">
-            <span>💼</span> LinkedIn
+          <a href="https://www.linkedin.com/in/bea-andrea-gamilong" target="_blank" rel="noreferrer" className="hover:text-earth transition flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
+            <img src={linkedinImg} alt="LinkedIn Icon" className="w-5 h-5 object-contain" />
+            LinkedIn
           </a>
         </div>
-
       </div>
     </footer>
   )

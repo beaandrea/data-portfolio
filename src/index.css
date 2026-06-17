@@ -1,4 +1,22 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@theme {
+  --color-azurite: #071742;
+  --color-lapis: #072B6B;
+  --color-topaz: #1A4D94;
+  --color-macaw: #357CB6;
+  --color-earth: #D5A25E;
+  --color-pottery: #AB6D48;
+  --color-parchment: #F4F4F0;
+}
+
+body {
+  color: var(--color-azurite);
+  background-color: var(--color-parchment);
+}
+
+.bg-grid-pattern {
+  background-color: var(--color-parchment);
+  background-image: radial-gradient(rgba(7, 43, 107, 0.1) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+}

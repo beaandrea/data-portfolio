@@ -1,23 +1,13 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import About from './components/About'
-import Portfolio from './components/Portfolio'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
-import "tailwindcss";
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import AllProjects from './pages/AllProjects.jsx'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white font-sans">
-      <Navbar />
-      <Hero />
-      <Services />
-      <About />
-      <Portfolio />
-      <Skills />
-      <Contact />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects" element={<AllProjects />} />
+    </Routes>
   )
 }
 
