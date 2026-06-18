@@ -18,20 +18,17 @@ export default function ProjectModal({ project, onClose }) {
 
   const handleClose = () => {
     setIsVisible(false);
-    setTimeout(() => onClose(), 400); // Wait for exit animation
+    setTimeout(() => onClose(), 400); 
   };
 
   const nextImage = () => setCurrentImgIndex((prev) => (prev + 1) % project.images.length);
   const prevImage = () => setCurrentImgIndex((prev) => (prev - 1 + project.images.length) % project.images.length);
 
   return (
-    // 1. The Outer Overlay (Fades in)
     <div className={`fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-10 bg-azurite/40 backdrop-blur-sm transition-all duration-400 ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       
-      {/* 2. The Main Modal Box (Slides up) */}
       <div className={`relative w-full max-w-[85rem] h-[95vh] md:h-[90vh] bg-grid-pattern rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-gray-200 transition-all duration-400 delay-75 ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
 
-        {/* Global Close Button */}
         <button 
           onClick={handleClose} 
           className="absolute top-6 right-6 z-50 bg-white text-azurite hover:bg-earth hover:text-white w-12 h-12 flex items-center justify-center rounded-full font-bold shadow-sm border border-gray-100 transition-all duration-300 hover:rotate-90 hover:scale-110"
@@ -39,8 +36,9 @@ export default function ProjectModal({ project, onClose }) {
           ✕
         </button>
 
-        {/* LEFT PANEL */}
-        <div className="w-full lg:w-[55%] relative flex items-center justify-center h-[40vh] lg:h-full overflow-hidden bg-lapis/5">
+        {/* LEFT PANEL: The Image Carousel */}
+        <div className="w-full lg:w-[55%] relative flex items-center justify-center h-[40vh] lg:h-full overflow-hidden bg-lapis/5 group">
+          
           {project.images && project.images.length > 0 ? (
             project.images.map((img, index) => {
               const numImages = project.images.length;
@@ -65,10 +63,16 @@ export default function ProjectModal({ project, onClose }) {
                   src={img} 
                   alt={`${project.title} screenshot ${index + 1}`} 
                   onClick={() => {
-                    if (isPrev) prevImage();
-                    if (isNext) nextImage();
+                    if (isCurrent) return;
+                    // FIXED: The 2-image math bug
+                    if (numImages === 2) {
+                      nextImage();
+                    } else {
+                      if (isPrev) prevImage();
+                      if (isNext) nextImage();
+                    }
                   }}
-                  className={`absolute max-w-[80%] max-h-[80%] object-contain transition-all duration-700 ease-in-out ${positionClasses}`} 
+                  className={`absolute max-w-[80%] max-h-[80%] object-contain transition-all duration-700 ease-in-out shadow-sm ${positionClasses}`} 
                 />
               );
             })
@@ -76,20 +80,44 @@ export default function ProjectModal({ project, onClose }) {
             <span className="text-azurite/50 font-bold tracking-widest uppercase text-sm">No Screenshots Available</span>
           )}
 
-          {/* Dots Indicator */}
+          {/* Navigation Control Bar (Arrows + Dots) */}
           {project.images && project.images.length > 1 && (
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2.5 z-40">
-              {project.images.map((_, i) => (
-                <div key={i} className={`w-2 h-2 rounded-full transition-all duration-500 ${i === currentImgIndex ? 'bg-earth w-6' : 'bg-azurite/20'}`}></div>
-              ))}
+            <div className="absolute bottom-6 left-0 w-full flex items-center justify-center gap-6 z-40">
+              
+              {/* Previous Button */}
+              <button 
+                onClick={(e) => { e.stopPropagation(); prevImage(); }} 
+                className="bg-white/70 hover:bg-white text-azurite hover:text-earth w-10 h-10 flex items-center justify-center rounded-full font-bold transition-all backdrop-blur-md shadow-sm hover:scale-110 border border-gray-200"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+
+              {/* Dots */}
+              <div className="flex gap-2.5">
+                {project.images.map((_, i) => (
+                  <div key={i} className={`w-2 h-2 rounded-full transition-all duration-500 ${i === currentImgIndex ? 'bg-earth w-6' : 'bg-azurite/20'}`}></div>
+                ))}
+              </div>
+
+              {/* Next Button */}
+              <button 
+                onClick={(e) => { e.stopPropagation(); nextImage(); }} 
+                className="bg-white/70 hover:bg-white text-azurite hover:text-earth w-10 h-10 flex items-center justify-center rounded-full font-bold transition-all backdrop-blur-md shadow-sm hover:scale-110 border border-gray-200"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+
             </div>
           )}
         </div>
 
-        {/* RIGHT PANEL */}
+        {/* RIGHT PANEL: Text Details */}
         <div className="w-full lg:w-[45%] h-full overflow-y-auto bg-white/70 backdrop-blur-md p-10 sm:p-14 border-l border-white/50">
-          
-          <div className="pr-4"> {/* Padding so scrollbar doesn't clip the text */}
+          <div className="pr-4">
             <span className="text-sm font-extrabold text-earth uppercase tracking-widest mb-3 block mt-2">
               {project.category}
             </span>
@@ -130,7 +158,6 @@ export default function ProjectModal({ project, onClose }) {
               )}
             </div>
           </div>
-
         </div>
 
       </div>
