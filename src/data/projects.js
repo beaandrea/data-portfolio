@@ -29,28 +29,27 @@ export const allProjectsData = [
     badge: null,
     link: "https://github.com/beaandrea/aegis-workforce-capacity",
     tags: ['All', 'Operations Analytics', 'Power BI', 'Python & SQL', 'Data Analytics'],
-    scenario: "Aegis GBS was bleeding $2.53 billion in annual overtime. I analyzed a 550,000-row legacy HRIS extract to identify the root cause of this structural waste and settle an executive debate between HR and the COO.",
+    scenario: "Aegis GBS was bleeding $2.53 billion in annual overtime. The executive team was deadlocked: Was this caused by seasonal spikes, or chronic structural understaffing? And what would right-sizing actually cost? I analyzed a 550,000-row legacy HRIS extract to answer these questions and settle the debate.",
     bullets: [
-      "Identified $4.4M in avoidable overtime costs isolated to a specific cohort (Stationary Engineers) working mathematically impossible 1,300+ overtime hours.",
-      "Cleaned and normalized 300,000+ fragmented legacy union records using Pandas regex dictionaries and SQL to calculate true FTE ROI.",
-      "Delivered a cost-neutral restructuring plan via Power BI, proving that wasted premiums could fully fund 35 net-new staff members."
+      "Identified $4.4M in avoidable overtime costs isolated to a specific cohort (Stationary Engineers) working mathematically impossible 1,180+ overtime hours.",
+      "Cleaned and normalized 550,000+ fragmented legacy union records using Pandas regex dictionaries and SQL to calculate true FTE ROI.",
+      "Delivered a cost-neutral restructuring plan via Power BI, proving that wasted premiums could fully fund 15 additional staff members at zero budget cost."
     ]
   },
   {
     id: "meridian",
     title: "Meridian IS: Sales Force Capacity Analytics",
-    category: "Python, SQL, Power BI",
-    description: "An executive Power BI dashboard and SQL financial model identifying pipeline bottlenecks.",
-    keyFinding: "$4.93M in stalled B2B revenue unlocked",
-    images: [meridianImg1, meridianImg2, meridianImg3],
-    badge: "3-Page Dashboard",
-    link: "https://github.com/beaandrea/meridian-sales-analytics",
-    tags: ['All', 'Power BI', 'Sales Analytics', 'Python & SQL', 'Data Analytics'],
-    scenario: "I analyzed Meridian IS's B2B sales pipeline to identify where territory imbalances and pipeline concentration were stalling revenue — and built a financial model to prove which executive hypothesis the data actually supported.",
+    category: "Business Intelligence & Data Strategy",
+    description: "Resolved an executive deadlock over a B2B revenue plateau by proving the cause was internal pipeline concentration, not market conditions, and quantifying a $4.93M unlock opportunity.",
+    image: [meridianImg1, meridianImg2, meridianImg3],
+    badge: "3-page Dashboard",
+    link: "https://github.com/beaandrea/meridian-sales-analytics", // Update with your actual link
+    tags: ['All', 'Sales Operations', 'Power BI', 'Python & SQL', 'Data Analytics'],
+    scenario: "I analyzed Meridian IS's B2B sales pipeline to identify where territory imbalances and pipeline concentration were stalling revenue, and developed a financial model to determine which executive hypothesis the data actually supported.",
     bullets: [
-      "Identified severe pipeline concentration stalling $4.93M in total potential revenue — a single rep holding 194 active deals (2.5x team average) — through SQL analysis of 9,000+ CRM records.",
-      "Proved that redistributing 114 stalled deals to underutilized East-region reps could unlock $169K in immediate revenue without requiring Finance to approve new headcount.",
-      "Built a three-page executive Power BI dashboard communicating territory efficiency, rep utilization, and ROI projections to the VP of Sales and Finance Director."
+      "Identified a massive territory imbalance where the Central region carried 50% more volume than the East but generated lower revenue per rep.",
+      "Exposed a localized routing bottleneck where a single manager assigned 747 deals to one representative, creating an unsustainable 194-deal active pipeline.",
+      "Delivered territory efficiency, rep utilization, and ROI projections to the VP of Sales and Finance Director through a three-page executive Power BI dashboard, enabling the leadership team to act without requiring Finance to approve new headcount."
     ]
   },
   {
@@ -93,9 +92,9 @@ export const allProjectsData = [
     category: "AI & Workflow Automation",
     description: "Architected an autonomous AI orchestrator using Microsoft Power Platform to transform unstructured syllabi into proactive, conflict-aware study schedules.",
     keyFinding: "Engineered a strict 'Human-in-the-Loop' AI architecture with transparent reasoning logs",
-    images: [kpmgImg1, kpmgImg2], 
+    images: [kpmgImg1, kpmgImg2],
     badge: "Hackathon",
-    link: null, 
+    link: null,
     tags: ['All', 'Hackathons & Academic'],
     scenario: "University students experience burnout because tracking requirements across unstructured syllabi is a reactive, manual process. For the 2026 KPMG Academic Innovation Challenge, my team built Educational Virtual Assistant (EVA) to proactively identify deadline conflicts and act as an intelligent bridge between course materials and personal productivity.",
     bullets: [
