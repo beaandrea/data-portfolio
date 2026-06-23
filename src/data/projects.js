@@ -39,11 +39,12 @@ export const allProjectsData = [
   {
     id: "meridian",
     title: "Meridian IS: Sales Force Capacity Analytics",
-    category: "Business Intelligence & Data Strategy",
+    category: "Python, SQL, Power BI",
     description: "Resolved an executive deadlock over a B2B revenue plateau by proving the cause was internal pipeline concentration, not market conditions, and quantifying a $4.93M unlock opportunity.",
-    image: [meridianImg1, meridianImg2, meridianImg3],
+    keyFinding: "$4.93M in stalled B2B revenue unlocked",
+    images: [meridianImg1, meridianImg2, meridianImg3],
     badge: "3-page Dashboard",
-    link: "https://github.com/beaandrea/meridian-sales-analytics", // Update with your actual link
+    link: "https://github.com/beaandrea/meridian-sales-analytics",
     tags: ['All', 'Sales Operations', 'Power BI', 'Python & SQL', 'Data Analytics'],
     scenario: "I analyzed Meridian IS's B2B sales pipeline to identify where territory imbalances and pipeline concentration were stalling revenue, and developed a financial model to determine which executive hypothesis the data actually supported.",
     bullets: [
