@@ -26,7 +26,7 @@ export default function About() {
 
                         {/* FIXED: Graduation Status */}
                         <p className="text-gray-200 leading-relaxed mb-10 text-lg">
-                            I'm a Computer Science senior graduating June 2026, specializing in Data Science at the University of Santo Tomas. My focus is operational business intelligence. I spent my internship at KPMG Philippines analyzing workforce data for a Big 4 consulting team, building dashboards that reached Partner level and got flagged for cross-departmental rollout. I'm looking for data analyst roles where clean data and honest analysis actually change how decisions get made.
+                            I'm a Computer Science graduate, specializing in Data Science from the University of Santo Tomas. My focus is operational business intelligence. I spent my internship at KPMG Philippines analyzing workforce data for a Big 4 consulting team, building dashboards that reached Partner level and got flagged for cross-departmental rollout. I'm looking for data analyst roles where clean data and honest analysis actually change how decisions get made.
                         </p>
 
                         <div className="flex flex-col gap-5">

@@ -23,8 +23,8 @@ export const allProjectsData = [
     id: "aegis",
     title: "Aegis GBS: Workforce Optimizer",
     category: "Python, SQL, Power BI",
-    description: "Analyzed 550k+ HR records to deliver a cost-neutral hiring strategy and eliminate structural waste.",
-    keyFinding: "$4.4M in avoidable overtime costs identified",
+    description: "Arbitrated an executive dispute between seasonal vs. structural overtime waste and delivered a cost-neutral fix requiring zero new budget.",
+    keyFinding: "$4.4M in OT premiums identified as sufficient to fully fund 15 new hires",
     images: [aegisImg],
     badge: null,
     link: "https://github.com/beaandrea/aegis-workforce-capacity",
@@ -32,8 +32,8 @@ export const allProjectsData = [
     scenario: "Aegis GBS was bleeding $2.53 billion in annual overtime. The executive team was deadlocked: Was this caused by seasonal spikes, or chronic structural understaffing? And what would right-sizing actually cost? I analyzed a 550,000-row legacy HRIS extract to answer these questions and settle the debate.",
     bullets: [
       "Identified $4.4M in avoidable overtime costs isolated to a specific cohort (Stationary Engineers) working mathematically impossible 1,180+ overtime hours.",
-      "Cleaned and normalized 550,000+ fragmented legacy union records using Pandas regex dictionaries and SQL to calculate true FTE ROI.",
-      "Delivered a cost-neutral restructuring plan via Power BI, proving that wasted premiums could fully fund 15 additional staff members at zero budget cost."
+      "Engineered a Python + SQL cleaning pipeline on 550,000+ fragmented legacy records resolving entity fragmentation across 300,000+ rows to produce the reliable FTE cost model that underpinned the final recommendation.",
+      "Delivered a Power BI executive dashboard with a cost-neutral restructuring plan: reallocating $4.4M from the overtime budget to base salaries funds 15 Stationary Engineer hires at zero net-new cost to Finance."
     ]
   },
   {
@@ -48,9 +48,9 @@ export const allProjectsData = [
     tags: ['All', 'Sales Operations', 'Power BI', 'Python & SQL', 'Data Analytics'],
     scenario: "I analyzed Meridian IS's B2B sales pipeline to identify where territory imbalances and pipeline concentration were stalling revenue, and developed a financial model to determine which executive hypothesis the data actually supported.",
     bullets: [
-      "Identified a massive territory imbalance where the Central region carried 50% more volume than the East but generated lower revenue per rep.",
-      "Exposed a localized routing bottleneck where a single manager assigned 747 deals to one representative, creating an unsustainable 194-deal active pipeline.",
-      "Delivered territory efficiency, rep utilization, and ROI projections to the VP of Sales and Finance Director through a three-page executive Power BI dashboard, enabling the leadership team to act without requiring Finance to approve new headcount."
+      "Identified that Central's 50% volume surplus over East was eroding revenue efficiency rather than amplifying it — ruling out market conditions as the root cause and pointing to structural pipeline overload.",
+      "Surfaced a CRM routing failure confirmed across two managers that had concentrated 194 active deals onto a single rep, 2.5× the team average, masking $4.93M in stalled pipeline from Finance's utilization review.",
+      "Translated the routing analysis into a quantified ROI model projecting a conservative $169K immediate revenue floor from redistributing one rep's excess pipeline, giving Finance the empirical proof needed to unblock action without approving new headcount."
     ]
   },
   {
