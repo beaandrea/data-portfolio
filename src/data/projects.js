@@ -6,6 +6,8 @@ import aegisImg from '../assets/images/01_aegis/aegis_dashboard.png';
 import meridianImg1 from '../assets/images/02_meridian/page1_territory.png';
 import meridianImg2 from '../assets/images/02_meridian/page2_utilization.png';
 import meridianImg3 from '../assets/images/02_meridian/page3_roi.png';
+/* PRESCOTT-VANCE */
+import pvImg1 from '../assets/images/06_prescott-vance/pv_dashboard.png';
 /* --- LITERARY --- */
 import literaryImg1 from '../assets/images/03_literary/emotional_arc.png';
 import literaryImg2 from '../assets/images/03_literary/diversity.png';
@@ -51,6 +53,23 @@ export const allProjectsData = [
       "Identified that Central's 50% volume surplus over East was eroding revenue efficiency rather than amplifying it — ruling out market conditions as the root cause and pointing to structural pipeline overload.",
       "Surfaced a CRM routing failure confirmed across two managers that had concentrated 194 active deals onto a single rep, 2.5× the team average, masking $4.93M in stalled pipeline from Finance's utilization review.",
       "Translated the routing analysis into a quantified ROI model projecting a conservative $169K immediate revenue floor from redistributing one rep's excess pipeline, giving Finance the empirical proof needed to unblock action without approving new headcount."
+    ]
+  },
+  {
+    id: "prescott-vance",
+    title: "P&V Financial: Operations Capacity & Throughput Optimizer",
+    category: "Python, SQL, Tableau",
+    description: "Resolved a headcount budget dispute between a COO and Compliance Head by proving a 23% processing time surge was a structural allocation failure — not a staffing shortage — and identifying a cost-neutral fix.",
+    keyFinding: "83.35% SLA breach rate traced to one dispute type",
+    images: [pvImg1],
+    badge: "Interactive Dashboard",
+    link: "https://github.com/beaandrea/pv-financial-operations",
+    tags: ['All', 'Banking Operations', 'Tableau', 'Python & SQL', 'Data Analytics'],
+    scenario: "I analyzed P&V Financial's 500K+ legacy transaction records to determine whether a year-over-year surge in processing times reflected a global staffing shortage or a localized structural failure — and to identify whether the business could resolve it without net-new headcount.",
+    bullets: [
+      "Identified that the 40.15% overall SLA breach rate was driven almost entirely by Merchant Disputes at 83.35% — while Identity Theft and Credit Card Fraud divisions held near-zero breach rates — ruling out a global capacity crisis and isolating the failure to one dispute category.",
+      "Resolved ~25,000 geographic dimension mismatches in legacy records by engineering an Agent_ID prefix extraction pipeline, reconstructing hub assignments as a canonical source of truth and making all hub-level throughput comparisons valid.",
+      "Proved a cost-neutral resolution by calculating true per-agent capacity via LOD expressions: New York's 3-agent team clears 22,000 cases/agent at 0% breach versus Manila's 14,000 cases/agent at 47% breach — a 57% throughput gap that validates cross-training over headcount expansion."
     ]
   },
   {
