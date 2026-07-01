@@ -47,7 +47,7 @@ export const allProjectsData = [
     images: [meridianImg1, meridianImg2, meridianImg3],
     badge: "3-page Dashboard",
     link: "https://github.com/beaandrea/meridian-sales-analytics",
-    tags: ['All', 'Sales Operations', 'Power BI', 'Python & SQL', 'Data Analytics'],
+    tags: ['All', 'Sales Analytics', 'Power BI', 'Python & SQL', 'Data Analytics'],
     scenario: "I analyzed Meridian IS's B2B sales pipeline to identify where territory imbalances and pipeline concentration were stalling revenue, and developed a financial model to determine which executive hypothesis the data actually supported.",
     bullets: [
       "Identified that Central's 50% volume surplus over East was eroding revenue efficiency rather than amplifying it — ruling out market conditions as the root cause and pointing to structural pipeline overload.",
@@ -62,7 +62,7 @@ export const allProjectsData = [
     description: "Resolved a headcount budget dispute between a COO and Compliance Head by proving a 23% processing time surge was a structural allocation failure — not a staffing shortage — and identifying a cost-neutral fix.",
     keyFinding: "83.35% SLA breach rate traced to one dispute type",
     images: [pvImg1],
-    badge: "Interactive Dashboard",
+    badge: null,
     link: "https://github.com/beaandrea/pv-financial-operations",
     tags: ['All', 'Banking Operations', 'Tableau', 'Python & SQL', 'Data Analytics'],
     scenario: "I analyzed P&V Financial's 500K+ legacy transaction records to determine whether a year-over-year surge in processing times reflected a global staffing shortage or a localized structural failure — and to identify whether the business could resolve it without net-new headcount.",
